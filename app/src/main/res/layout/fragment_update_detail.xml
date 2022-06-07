@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.uas_pemograman_mobile.ui.update_covid19.UpdateDataViewModel" />
+        <variable
+            name="image"
+            type="com.example.uas_pemograman_mobile.network.UpdateData" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@{ viewModel.UpdateData.key}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Key"/>
+
+            <TextView
+                android:id="@+id/jumlah_kasus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@{ viewModel.UpdateData.jumlah_kasus}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/key"
+                app:layout_constraintTop_toBottomOf="@+id/key"
+                tools:text="Jumlah Kasus Covid19"/>
+
+            <TextView
+                android:id="@+id/jumlah_sembuh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@{ viewModel.UpdateData.jumlah_sembuh}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/jumlah_kasus"
+                app:layout_constraintTop_toBottomOf="@+id/jumlah_kasus"
+                tools:text="Jumlah Sembuh Covid19"/>
+
+            <TextView
+                android:id="@+id/jumlah_meninggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@{ viewModel.UpdateData.jumlah_meninggal}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/jumlah_sembuh"
+                app:layout_constraintTop_toBottomOf="@+id/jumlah_sembuh"
+                tools:text="Kode Rumah Sakit"/>
+
+            <TextView
+                android:id="@+id/jumlah_dirawat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@{ viewModel.UpdateData.jumlah_dirawat}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/jumlah_meninggal"
+                app:layout_constraintTop_toBottomOf="@+id/jumlah_meninggal"
+                tools:text="Tipe Rumah Sakit"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

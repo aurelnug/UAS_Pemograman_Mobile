@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.uas_pemograman_mobile.ui.RumahSakit_covid19.RumahSakitViewModel" />
+        <variable
+            name="image"
+            type="com.example.uas_pemograman_mobile.network.RumahSakit" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nama_rs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@{ viewModel.RumahSakit.nama}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Nama Rumah Sakit"/>
+
+            <TextView
+                android:id="@+id/wilayah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@{ viewModel.RumahSakit.wilayah}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/nama_rs"
+                app:layout_constraintTop_toBottomOf="@+id/nama_rs"
+                tools:text="Wilayah Rumah Sakit"/>
+
+            <TextView
+                android:id="@+id/alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@{ viewModel.RumahSakit.alamat}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/wilayah"
+                app:layout_constraintTop_toBottomOf="@+id/wilayah"
+                tools:text="Alamat Rumah Sakit"/>
+
+            <TextView
+                android:id="@+id/kode_rs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@{ viewModel.RumahSakit.kode_rs}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/alamat"
+                app:layout_constraintTop_toBottomOf="@+id/alamat"
+                tools:text="Kode Rumah Sakit"/>
+
+            <TextView
+                android:id="@+id/tipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@{ viewModel.RumahSakit.tipe}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/kode_rs"
+                app:layout_constraintTop_toBottomOf="@+id/kode_rs"
+                tools:text="Tipe Rumah Sakit"/>
+
+            <TextView
+                android:id="@+id/tlp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@{ viewModel.RumahSakit.telepon}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/tipe"
+                app:layout_constraintTop_toBottomOf="@+id/tipe"
+                tools:text="Nomor Telepon Rumah Sakit"/>
+
+            <TextView
+                android:id="@+id/tempat_tidur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@{ viewModel.RumahSakit.tempat_tidur}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/tlp"
+                app:layout_constraintTop_toBottomOf="@+id/tlp"
+                tools:text="Tempat Tidur di Rumah Sakit"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</layout>

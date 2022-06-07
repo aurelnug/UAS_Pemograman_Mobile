@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.uas_pemograman_mobile.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_inews"
+        android:name="com.example.uas_pemograman_mobile.ui.Inews.InewsListFragment"
+        android:label="Inews"
+        tools:layout="@layout/list_view_item_inews">
+        <action
+            android:id="@+id/action_nav_inewsListFragment_to_inewsDetailFragment"
+            app:destination="@id/InewsDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/InewsDetailFragment"
+        android:name="com.example.uas_pemograman_mobile.ui.Inews.InewsDetailFragment"
+        android:label="Fragment Detail Inews">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_rs"
+        android:name="com.example.uas_pemograman_mobile.ui.RumahSakit_covid19.RumahSakitListFragment"
+        android:label="Rumah Sakit"
+        tools:layout="@layout/list_view_item_rs">
+        <action
+            android:id="@+id/action_nav_rsListFragment_to_rsDetailFragment"
+            app:destination="@id/RsDetailFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/RsDetailFragment"
+        android:name="com.example.uas_pemograman_mobile.ui.RumahSakit_covid19.RumahSakitDetailFragment"
+        android:label="Fragment Detail Rumah Sakit">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_update"
+        android:name="com.example.uas_pemograman_mobile.ui.RumahSakit_covid19.RumahSakitListFragment"
+        android:label="Update Data Covid19"
+        tools:layout="@layout/list_view_item_update">
+    <action
+        android:id="@+id/action_nav_updateListFragment_to_updateDetailFragment"
+        app:destination="@id/updateDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateDetailFragment"
+        android:name="com.example.uas_pemograman_mobile.ui.update_covid19.UpdateDataDetailFragment"
+        android:label="Fragment Detail Update Data">
+
+    </fragment>
+</navigation>
