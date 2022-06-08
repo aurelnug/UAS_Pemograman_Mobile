@@ -16,7 +16,7 @@ class InewsListAdapter (val clickListener: InewsListener) :
         ) : RecyclerView.ViewHolder(binding.root) {
             fun bind(clickListener: InewsListener, inews: InewsItem) {
                 binding.inews = inews
-                binding.clickListener = clickListener
+                binding.clicklistener = clickListener
                 binding.executePendingBindings()
             }
         }
@@ -43,6 +43,6 @@ class InewsListAdapter (val clickListener: InewsListener) :
     }
 }
 
-class InewsListener(val clickListener: (inews: InewsItem) -> Unit) {
-    fun onClick(inews: InewsItem) = clickListener(inews)
+class InewsListener(val clicklistener: (inews: InewsItem) -> Unit) {
+    fun onClick(inews: InewsItem) = clicklistener(inews)
 }

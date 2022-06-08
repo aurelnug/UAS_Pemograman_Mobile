@@ -7,9 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.uas_pemograman_mobile.databinding.FragmentInewsDetailBinding
+import com.example.uas_pemograman_mobile.ui.MyViewModel
 
 class InewsDetailFragment: Fragment() {
-    private val viewModelInews: InewsViewModel by activityViewModels()
+    private val viewModelInews: MyViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,

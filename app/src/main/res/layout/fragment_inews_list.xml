@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.uas_pemograman_mobile.ui.Inews.InewsViewModel" />
+            type="com.example.uas_pemograman_mobile.ui.MyViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -10,10 +10,11 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.uas_pemograman_mobile.R
 import com.example.uas_pemograman_mobile.databinding.FragmentRsDetailBinding
+import com.example.uas_pemograman_mobile.ui.MyViewModel
 
 
 class RumahSakitDetailFragment: Fragment() {
-    private val viewModelrs: RumahSakitViewModel by activityViewModels()
+    private val viewModelrs: MyViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,

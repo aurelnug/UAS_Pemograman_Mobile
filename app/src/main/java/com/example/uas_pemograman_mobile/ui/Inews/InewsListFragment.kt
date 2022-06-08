@@ -10,9 +10,10 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.uas_pemograman_mobile.R
 import com.example.uas_pemograman_mobile.databinding.FragmentInewsListBinding
+import com.example.uas_pemograman_mobile.ui.MyViewModel
 
 class InewsListFragment: Fragment() {
-    private val viewModelInews: InewsViewModel by activityViewModels()
+    private val viewModelInews: MyViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
