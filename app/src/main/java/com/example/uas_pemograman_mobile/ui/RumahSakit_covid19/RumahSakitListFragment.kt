@@ -14,9 +14,10 @@ import com.example.uas_pemograman_mobile.databinding.FragmentRsListBinding
 import com.example.uas_pemograman_mobile.ui.Inews.InewsListAdapter
 import com.example.uas_pemograman_mobile.ui.Inews.InewsListener
 import com.example.uas_pemograman_mobile.ui.Inews.InewsViewModel
+import com.example.uas_pemograman_mobile.ui.MyViewModel
 
 class RumahSakitListFragment: Fragment() {
-    private val viewModelrs: RumahSakitViewModel by activityViewModels()
+    private val viewModelrs: MyViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
